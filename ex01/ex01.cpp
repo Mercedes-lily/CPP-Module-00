@@ -8,6 +8,7 @@ int main()
     PhoneBook   repertory(0);
 
     std::cout << "\033[0;35mWelcome in your awesome PhoneBook" << std::endl;
+    std::cout << "Use ADD SEARCH or EXIT" << std::endl;
     while(!std::cin.eof())
     {
         std::cout << " >   " && getline(std::cin, entry);

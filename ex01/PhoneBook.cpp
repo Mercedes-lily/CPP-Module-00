@@ -1,5 +1,8 @@
 #include <iostream>
+#include <iomanip>
 #include "PhoneBook.hpp"
+
+//TODO ctrl + D, contacts vides et tout tester
 
 PhoneBook::PhoneBook(int i) : _nextContact(i)
 {
@@ -46,7 +49,8 @@ void    PhoneBook::search(void)
         std::cout << "0 contact in the Awesome PhoneBook" << std::endl;
         return ;
     }
-    std::cout << "     index| firstname|  lastname|  nickname" << std::endl;
+    std::cout << std::setw(10) << "index" << "|" << std::setw(10) << std::setw(10) << "firstname" << "|";
+    std::cout << std::setw(10) << "lastname" << "|" << std::setw(10) << "nickname" << std::endl;
     for (int i = 0; i < 8; i ++)
     {
         if( i >= this->_nextContact)
@@ -61,9 +65,9 @@ void    PhoneBook::search(void)
         std::cout << std::endl;
     }
     std::cout << "Enter the index of the desired contact : ";
-    while(1)
+    while(!std::cin.eof())
 	{
-		std::cin >> index;
+        getline(std::cin, index);
 		i = index[0] - 48;
         if (i >= this->_nextContact)
             std::cout << "Enter a valid index" << std::endl << "Enter the index of the desired contact : ";
@@ -79,6 +83,4 @@ void    PhoneBook::search(void)
 			return ;
         }
 	}
-
-
 }

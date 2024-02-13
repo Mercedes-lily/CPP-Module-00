@@ -1,11 +1,11 @@
-NAME = ex00
+NAME = megaphone
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJ_DIR = obj/
 
-SRCS =	ex00.cpp
+SRCS =	megaphone.cpp
 
 VPATH = $(OBJ_DIR)
 
