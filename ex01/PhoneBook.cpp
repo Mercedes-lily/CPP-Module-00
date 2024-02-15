@@ -75,11 +75,11 @@ void    PhoneBook::search(void)
             std::cout << "Enter a valid index" << std::endl << "Enter the index of the desired contact : ";
         else
         {
-			std::cout << this->contacts[i].getFirstName() << std::endl;
-			std::cout << this->contacts[i].getLastName() << std::endl;
-			std::cout << this->contacts[i].getNickname() << std::endl;
-			std::cout << this->contacts[i].getPhoneNumber() << std::endl;
-			std::cout << this->contacts[i].getDarkestSecret() << std::endl;
+			std::cout << std::endl << "First Name     :" << this->contacts[i].getFirstName() << std::endl;
+			std::cout << "Last Name      :"<< this->contacts[i].getLastName() << std::endl;
+			std::cout << "Nickname       :"<< this->contacts[i].getNickname() << std::endl;
+			std::cout << "Phone Number   :"<< this->contacts[i].getPhoneNumber() << std::endl;
+			std::cout << "Darkest Secret :"<< this->contacts[i].getDarkestSecret() << std::endl;
 			return ;
         }
 	}
