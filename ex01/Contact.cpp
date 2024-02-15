@@ -40,15 +40,45 @@ std::string Contact::getDarkestSecret(void)
 void    Contact::put_infos(void)
 {
     std::cout << "Please enter the infos for the contact" << std::endl;
-    std::cout << "First Name : ";
-    getline(std::cin, this->firstName);
-    std::cout << "Last Name : ";
-    getline(std::cin, this->lastName);
-    std::cout << "Nickname : ";
-    getline(std::cin, this->nickname);
-    std::cout << "Phone Number : ";
-    getline(std::cin, this->phoneNumber);
-    std::cout << "Darkest Secret : ";
-    getline(std::cin, this->darkestSecret);
+    while(!std::cin.eof())
+    {
+        std::cout << "First Name : ";
+        getline(std::cin, this->firstName);
+        if (this->firstName.length() != 0)
+            break;
+
+    }
+    while(!std::cin.eof())
+    {
+        std::cout << "Last Name : ";
+        getline(std::cin, this->lastName);
+        if (this->lastName.length() != 0)
+            break;
+
+    }
+    while(!std::cin.eof())
+    {
+        std::cout << "Nickname : ";
+        getline(std::cin, this->nickname);
+        if (this->nickname.length() != 0)
+            break;
+
+    }
+        while(!std::cin.eof())
+    {
+        std::cout << "Phone Number : ";
+        getline(std::cin, this->phoneNumber);
+        if (this->phoneNumber.length() != 0)
+            break;
+
+    }
+        while(!std::cin.eof())
+    {
+        std::cout << "Darkest Secret : ";
+        getline(std::cin, this->darkestSecret);
+        if (this->darkestSecret.length() != 0)
+            break;
+
+    }
     std::cout << "Contact infos completed!" << std::endl;
 }
